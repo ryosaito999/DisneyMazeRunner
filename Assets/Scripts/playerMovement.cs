@@ -39,21 +39,21 @@ void Start () {
 
     // Update is called once per frame
     void Update () {
-      
 
-    }
-
-    void FixedUpdate()
-    {
         // left-right movement code
         float horizontalInput = Input.GetAxisRaw("Horizontal") * horizontalSpeed;
         transform.Translate(horizontalInput, 0, 0);
 
         //jumping code
-        if(Input.GetAxisRaw("Jump") == 1)
+        if (Input.GetAxisRaw("Jump") == 1)
         {
             playerJump();
         }
+    }
+
+    void FixedUpdate()
+    {
+       
     }
 
     void OnTriggerEnter(Collider col)

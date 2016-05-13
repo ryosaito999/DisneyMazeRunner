@@ -20,7 +20,6 @@ public class UIHandler : MonoBehaviour {
             //
             Time.timeScale = 0;
 
-
             // show game over yeaaa
             GUI.SetActive(false);
             gameoverMenu.SetActive( true);

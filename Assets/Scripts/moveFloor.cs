@@ -58,7 +58,6 @@ public class moveFloor : MonoBehaviour {
         Vector3 center = gameObject.GetComponent<Renderer>().bounds.center;
         
         Instantiate(futureTile, new Vector3(0, 0, center.z + 48), Quaternion.identity);
-        gameManager.tileList.Add(futureTile);
 
     }
 
@@ -66,11 +65,16 @@ public class moveFloor : MonoBehaviour {
     void Start () {
 
         rb = GetComponent<Rigidbody>();
+        Vector3 direction = new Vector3(0.0f, 0.0f, -1.0f);
+        GetComponent<Rigidbody>().velocity = direction * gameManager.speed;
     }
 
     // Update is called once per frame
     void Update () {
 
+      
+    
+        
     }
 
     void FixedUpdate()
