@@ -4,9 +4,9 @@ using System.Collections;
 public class playerMovement : MonoBehaviour {
     Rigidbody rb;
 
-
     public float jumpForce;
     public float horizontalSpeed;
+    
 
     void playerJump()
     {
@@ -14,12 +14,15 @@ public class playerMovement : MonoBehaviour {
       
         Debug.Log("Should Jump");
 
+        //make sure ray starts at center of collider and reaches underneath the player 
         Vector3 rayOrigin = GetComponent<Collider>().bounds.center;
-
         float rayDistance = GetComponent<Collider>().bounds.extents.y + 0.1f;
+
+        //declare a ray and shoot it downwards 
         Ray ray = new Ray();
         ray.origin = rayOrigin;
         ray.direction = Vector3.down;
+
         if (Physics.Raycast(ray, rayDistance, 1))
         {
             Debug.Log("Jumping");
