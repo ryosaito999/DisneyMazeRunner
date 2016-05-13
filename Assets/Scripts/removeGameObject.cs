@@ -15,7 +15,12 @@ public class removeGameObject : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
+        if (col.gameObject.tag == "Tile")
+        {
+            gameManager.tileList.Remove(col.gameObject);
+        }
+
         GameObject.Destroy(col.gameObject);
-     
+        
     }
 }

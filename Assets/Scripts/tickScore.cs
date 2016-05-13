@@ -13,7 +13,7 @@ public class tickScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        scoreText.text = gameManager.score.ToString();
+        scoreText.text = "Score: " + gameManager.score.ToString();
 
     }
 }

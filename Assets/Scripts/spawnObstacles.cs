@@ -16,6 +16,7 @@ public class spawnObstacles : MonoBehaviour {
     // want to spawn obstacles in random areas in each tile
     private void spawn()
     {
+        //TODO make sure obstacles spawn set distance from each other
         for (int i = 0; i < numObstacles; ++i)
         {
             float xLoc = Random.Range(center.x - tileSizeX / 2, center.x + tileSizeX / 2 );

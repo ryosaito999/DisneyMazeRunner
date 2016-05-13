@@ -4,12 +4,15 @@ using System.Collections;
 public class spawnCoins : MonoBehaviour {
     public GameObject coin;
     public int numCoins;
+    public int coinSpacing;
+
     Collider col;
     float startPoint;
 	// Use this for initialization
 
     private void spawnLine()
     {
+        // spawn coins in a line! 
         for(int i =0; i < numCoins; ++i)
         {
             Instantiate(coin, new Vector3(0, 1 , startPoint + 2*i),  Quaternion.identity);

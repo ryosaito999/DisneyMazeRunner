@@ -55,4 +55,13 @@ void Start () {
             playerJump();
         }
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("hit Obstacle!");
+            gameManager.gameOver = true;
+        }
+    }
 }
