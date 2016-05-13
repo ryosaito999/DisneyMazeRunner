@@ -3,7 +3,6 @@ using System.Collections;
 
 public class moveFloor : MonoBehaviour {
 
-    public GameObject tile;
     public GameObject floor;
 
     public float speed;
@@ -24,10 +23,7 @@ public class moveFloor : MonoBehaviour {
 
         //spawn a tile
         float futurelocation = futureTile.GetComponentInChildren<BoxCollider>().bounds.size.z + colBounds.z + transform.position.z;
-        Instantiate(tile, new Vector3(transform.position.x, transform.position.y , futurelocation+1.0f), Quaternion.identity);
-
-        //set up next tile to spawn
-        futureTile = tile;
+        Instantiate(futureTile, new Vector3(transform.position.x, transform.position.y , futurelocation+1.0f), Quaternion.identity);
     }
 
     // Use this for initialization
