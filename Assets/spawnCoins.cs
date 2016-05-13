@@ -12,7 +12,7 @@ public class spawnCoins : MonoBehaviour {
     {
         for(int i =0; i < numCoins; ++i)
         {
-            Instantiate(coin, new Vector3(0, 1 , startPoint + i),  Quaternion.identity);
+            Instantiate(coin, new Vector3(0, 1 , startPoint + 2*i),  Quaternion.identity);
         }
     }
 

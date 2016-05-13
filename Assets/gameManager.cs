@@ -6,6 +6,7 @@ public class gameManager : MonoBehaviour {
 
     //scoring
     public static float score;
+    public static float speed = 7.0f;
 
     // Use this for initialization
     void Start () {

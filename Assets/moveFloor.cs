@@ -5,7 +5,6 @@ public class moveFloor : MonoBehaviour {
 
     public GameObject floor;
 
-    public float speed;
     Vector3 colBounds;
     Vector3 colCenter;
 
@@ -42,7 +41,7 @@ public class moveFloor : MonoBehaviour {
     void FixedUpdate()
     {
         Vector3 direction = new Vector3(0.0f, 0.0f, -1.0f);
-        rb.velocity = direction * speed;
+        rb.velocity = direction * gameManager.speed;
 
     }
 
